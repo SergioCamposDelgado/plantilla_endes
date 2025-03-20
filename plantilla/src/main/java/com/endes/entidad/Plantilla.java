@@ -36,7 +36,7 @@ public class Plantilla {
         }
         
         if (repetido) {
-        	throw new IllegalArgumentException("No se puede contratar un empleado repetido");
+        	throw new IllegalArgumentException("El empleado con DNI " +empleado.getDni() +" ya está contratado");
         }
         empleados.add(empleado);
     }
