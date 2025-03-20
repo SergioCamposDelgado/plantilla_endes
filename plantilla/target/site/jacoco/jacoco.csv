@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+plantilla,com.endes.entidad,Tecnico,40,0,4,0,11,0,6,0,4,0
+plantilla,com.endes.entidad,Plantilla,43,0,6,0,10,0,7,0,4,0
+plantilla,com.endes.entidad,Empleado,54,40,12,8,12,11,15,2,5,2
+plantilla,com.endes.entidad,Comercial,13,37,2,2,4,8,2,5,1,4
+plantilla,com.endes,App,80,0,2,0,11,0,3,0,2,0

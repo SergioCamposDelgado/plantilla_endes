@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Plantilla.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">plantilla</a> &gt; <a href="index.source.html" class="el_package">com.endes.entidad</a> &gt; <span class="el_source">Plantilla.java</span></div><h1>Plantilla.java</h1><pre class="source lang-java linenums">package com.endes.entidad;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Clase que gestiona una lista de empleados dentro de la empresa.
+ */
+public class Plantilla {
+    private List&lt;Empleado&gt; empleados;
+
+    /**
+     * Constructor de la clase Plantilla.
+     * Inicializa la lista de empleados.
+     */
+<span class="nc" id="L16">    public Plantilla() {</span>
+<span class="nc" id="L17">        empleados = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L18">    }</span>
+
+    /**
+     * Agrega un nuevo empleado a la plantilla.
+     *
+     * @param empleado El empleado a contratar.
+     * @throws IllegalArgumentException Si el empleado es nulo.
+     */
+    public void contratarEmpleado(Empleado empleado) {
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        if (empleado == null) {</span>
+<span class="nc" id="L28">            throw new IllegalArgumentException(&quot;No se puede contratar un empleado nulo&quot;);</span>
+        }
+<span class="nc" id="L30">        empleados.add(empleado);</span>
+<span class="nc" id="L31">    }</span>
+
+    /**
+     * Busca empleados por nombre o apellido.
+     *
+     * @param filtroNombre Nombre o apellido a buscar.
+     * @return Lista de empleados que coincidan con el filtro.
+     * @throws RuntimeException Si no se encuentra ningún empleado.
+     */
+    public List&lt;Empleado&gt; getEmpleadosPorNombre(String filtroNombre) {
+<span class="nc" id="L41">        return empleados.stream()</span>
+<span class="nc bnc" id="L42" title="All 4 branches missed.">                .filter(e -&gt; e.getNombre().contains(filtroNombre) || e.getApellidos().contains(filtroNombre))</span>
+<span class="nc" id="L43">                .toList();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
